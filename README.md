@@ -17,13 +17,13 @@ Visit phptoolcase.com for complete guides and examples.
 
 == Requirements: php version 5.3+
 
-== INSTALLATION ===================================
+== INSTALLATION WITH COMPOSER ========================
 
-	Composer:
+	Add the following to your composer.json file:
 
 	"require": 
 	{
-		"fluidphp/translator-helper": "*"
+		"fluidphp/translator-helper": "dev"
 	} ,
 	"extra": 
 	{
