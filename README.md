@@ -23,7 +23,7 @@ Visit phptoolcase.com for complete guides and examples.
 
 	"require": 
 	{
-		"fluidphp/translator-helper": "dev"
+		"fluidphp/translator-helper": "~1.0"
 	} ,
 	"extra": 
 	{
