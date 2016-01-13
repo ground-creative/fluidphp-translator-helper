@@ -19,7 +19,7 @@ Visit phptoolcase.com for complete guides and examples.
 
 == INSTALLATION WITH COMPOSER ========================
 
-- WITH FLUIDPHP FRAMEWORK:
+	- WITH FLUIDPHP FRAMEWORK:
 
 		"require": 
 		{
