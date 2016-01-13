@@ -19,19 +19,24 @@ Visit phptoolcase.com for complete guides and examples.
 
 == INSTALLATION WITH COMPOSER ========================
 
-	Add the following to your composer.json file:
+- WITH FLUIDPHP FRAMEWORK:
 
-	"require": 
-	{
-		"fluidphp/translator-helper": "~1.0"
-	} ,
-	"extra": 
-	{
-		"installer-paths": 
+		"require": 
 		{
-			"./vendor/fluidphp/helpers/Translator": ["fluidphp/translator-helper"]
+			"mnsami/composer-custom-directory-installer": "1.0.*" ,
+			"fluidphp/translator-helper": "~1.0"
+		} ,
+		"extra": 
+		{
+			"installer-paths": 
+			{
+				"./vendor/fluidphp/helpers/Translator": ["fluidphp/translator-helper"]
+			}
 		}
-	}
-
-
-
+	
+	- STAND-ALONE:
+		
+		"require": 
+		{
+			"fluidphp/translator-helper": "~1.0"
+		}

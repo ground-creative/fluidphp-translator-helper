@@ -12,10 +12,4 @@
 			"email": "carlo@salapc.com" ,
 			"role": "Developer"
 		}
-	] ,
-	"require": 
-	{
-		"mnsami/composer-custom-directory-installer": "1.0.*" ,
-		"fluidphp/framework": "~1.0"
-	}
-}
+	]
