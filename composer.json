@@ -1,0 +1,21 @@
+ {
+	"name": "fluidphp/translator-helper" ,	
+	"type": "library" ,
+	"description": "FluidPHP framework translator helper class that uses xml as database" ,
+	"keywords": [ "php framework" , 'xml translator" , "xml reader", "xml parser" ] ,
+	"homepage": "http://phptoolcase.com" ,
+	"license": "GPL V2" ,
+	"authors": 
+	[
+		{
+			"name": "Carlo Pietrobattista" ,
+			"email": "carlo@salapc.com" ,
+			"role": "Developer"
+		}
+	] ,
+	"require": 
+	{
+		"mnsami/composer-custom-directory-installer": "1.0.*",
+		"fluidphp/framework": "~1.0"
+	}
+}
