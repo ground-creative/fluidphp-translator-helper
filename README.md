@@ -21,22 +21,22 @@ Visit phptoolcase.com for complete guides and examples.
 
 	- WITH FLUIDPHP FRAMEWORK:
 
-		"require": 
+	"require": 
+	{
+		"mnsami/composer-custom-directory-installer": "1.0.*" ,
+		"fluidphp/translator-helper": "~1.0"
+	} ,
+	"extra": 
+	{
+		"installer-paths": 
 		{
-			"mnsami/composer-custom-directory-installer": "1.0.*" ,
-			"fluidphp/translator-helper": "~1.0"
-		} ,
-		"extra": 
-		{
-			"installer-paths": 
-			{
-				"./vendor/fluidphp/helpers/Translator": ["fluidphp/translator-helper"]
-			}
+			"./vendor/fluidphp/helpers/Translator": ["fluidphp/translator-helper"]
 		}
+	}
 	
-	- STAND-ALONE:
+- STAND-ALONE:
 		
-		"require": 
-		{
-			"fluidphp/translator-helper": "~1.0"
-		}
+	"require": 
+	{
+		"fluidphp/translator-helper": "~1.0"
+	}
