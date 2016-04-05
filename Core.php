@@ -29,7 +29,7 @@
 			$value = trim( $value );
 			if ( !isset( $this->_data[ $value ] ) )
 			{
-				throw new \Exception( 'Translator could not load xml file ' . $xml . '.xml!' );
+				throw new \Exception( 'Translator could not find value "' . $value . '"!' );
 				return false;
 			}
 			return $this->_data[ $value ];

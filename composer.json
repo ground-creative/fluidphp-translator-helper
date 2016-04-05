@@ -12,4 +12,12 @@
 			"email": "carlo@salapc.com" ,
 			"role": "Developer"
 		}
-	]
+	] ,
+	"autoload": 
+	{
+		"psr-4": 
+		{
+			"helpers\\Translator\\": ""
+		}
+	}
+}
