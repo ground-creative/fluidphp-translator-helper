@@ -37,6 +37,13 @@
 		/**
 		*
 		*/
+		public function has( $value )
+		{
+			return array_key_exists( $value , $this->_data );
+		}
+		/**
+		*
+		*/
 		protected $_data = array( );
 		/**
 		*
