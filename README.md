@@ -23,7 +23,7 @@ Visit phptoolcase.com for complete guides and examples.
 	
 		"require": 
 		{
-			"mnsami/composer-custom-directory-installer": "1.0.*" ,
+			"mnsami/composer-custom-directory-installer": "1.1.*" ,
 			"fluidphp/translator-helper": "~1.0"
 		} ,
 		"extra": 
