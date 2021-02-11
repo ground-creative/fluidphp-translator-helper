@@ -4,7 +4,7 @@
 	"description": "FluidPHP framework translator helper class that uses xml as database" ,
 	"keywords": [ "php framework" , "xml translator" , "xml reader", "xml parser" ] ,
 	"homepage": "http://phptoolcase.com" ,
-	"license": "GPL V2" ,
+	"license": "GPL-2.0-or-later" ,
 	"authors": 
 	[
 		{
