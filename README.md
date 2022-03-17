@@ -15,7 +15,7 @@ Visit phptoolcase.com for complete guides and examples.
 
 == Project Home: http://phptoolcase.com
 
-== Requirements: php version 5.3+
+== Requirements: php version 5.4+
 
 == INSTALLATION WITH COMPOSER ========================
 
@@ -23,7 +23,7 @@ Visit phptoolcase.com for complete guides and examples.
 	
 		"require": 
 		{
-			"mnsami/composer-custom-directory-installer": "1.1.*" ,
+			"mnsami/composer-custom-directory-installer": 2.0.*" ,
 			"fluidphp/translator-helper": "~1.0"
 		} ,
 		"extra": 
