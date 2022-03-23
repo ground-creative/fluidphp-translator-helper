@@ -40,3 +40,4 @@ http://phptoolcase.com
 ### Requirements
 
 php version 5.4+
+php-xml module
