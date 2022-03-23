@@ -4,16 +4,6 @@ FluidPhp is a framework based on the PhpToolCase library, visit [phptoolcase.com
 
 This helper to can parse xml tags that can be used in your views.
 
-## Project Info
-
-### Project Home
-
-http://phptoolcase.com
-
-### Requirements
-
-php version 5.4+
-
 ## Installation
 
 Add the package to your composer.json file, to install the helper.
@@ -40,3 +30,13 @@ Stand-alone:
 	"fluidphp/translator-helper": "*"
 }
 ```
+
+## Project Info
+
+### Project Home
+
+http://phptoolcase.com
+
+### Requirements
+
+php version 5.4+
