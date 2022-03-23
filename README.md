@@ -20,23 +20,23 @@ Use composer to install the files.
 
 With fluidphp framework:
 ```
-	"require": 
+"require": 
+{
+	"mnsami/composer-custom-directory-installer": "2.0.*" ,
+	"fluidphp/translator-helper": "*"
+} ,
+"extra": 
+{
+	"installer-paths": 
 	{
-		"mnsami/composer-custom-directory-installer": "2.0.*" ,
-		"fluidphp/translator-helper": "*"
-	} ,
-	"extra": 
-	{
-		"installer-paths": 
-		{
-			"./vendor/fluidphp/helpers/Translator": ["fluidphp/translator-helper"]
-		}
+		"./vendor/fluidphp/helpers/Translator": ["fluidphp/translator-helper"]
 	}
+}
 ```	
 Stand-alone:
 ```		
-	"require": 
-	{
-		"fluidphp/translator-helper": "*"
-	}
+"require": 
+{
+	"fluidphp/translator-helper": "*"
+}
 ```
