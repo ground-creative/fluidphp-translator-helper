@@ -16,7 +16,7 @@ php version 5.4+
 
 ## Installation
 
-Use composer to install the files.
+Add the package to your composer.json file, to install the helper.
 
 With fluidphp framework:
 ```
