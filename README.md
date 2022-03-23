@@ -14,7 +14,7 @@ http://phptoolcase.com
 
 php version 5.4+
 
-## INSTALLATION
+## Installation
 
 Use composer to install the files.
 
