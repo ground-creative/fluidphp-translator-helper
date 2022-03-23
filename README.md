@@ -39,5 +39,5 @@ http://phptoolcase.com
 
 ### Requirements
 
-php version 5.4+
+php version 5.4+<br>
 php-xml module
