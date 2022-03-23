@@ -1,42 +1,44 @@
- 
-##########################################################
+ # FluidPhp Ppen Source Project Translator Helper
 
-FluidPhp 1 open source project translator helper
+*A powerfull framework based on the [phptoolcase](http://phptoolcase.com) library.*
 
-A powerfull framework based on the phptoolcase library.
+FluidPhp is a framework based on the PhpToolCase library, visit [phptoolcase.com](http://phptoolcase.com) for complete guides and examples.
 
-##########################################################
+This helper is to parse xml tags in your views.
 
-FluidPhp is a framework based on the PhpToolCase library.
+## Project Info
 
-Visit phptoolcase.com for complete guides and examples.
+### Project Home
 
-== PROJECT INFO ===================================
+http://phptoolcase.com
 
-== Project Home: http://phptoolcase.com
+### Requirements
 
-== Requirements: php version 5.4+
+php version 5.4+
 
-== INSTALLATION WITH COMPOSER ========================
+## INSTALLATION
 
-	- WITH FLUIDPHP FRAMEWORK:
-	
-		"require": 
+Use composer to install the files.
+
+With fluidphp framework:
+```
+	"require": 
+	{
+		"mnsami/composer-custom-directory-installer": "2.0.*" ,
+		"fluidphp/translator-helper": "*"
+	} ,
+	"extra": 
+	{
+		"installer-paths": 
 		{
-			"mnsami/composer-custom-directory-installer": "2.0.*" ,
-			"fluidphp/translator-helper": "~1.0"
-		} ,
-		"extra": 
-		{
-			"installer-paths": 
-			{
-				"./vendor/fluidphp/helpers/Translator": ["fluidphp/translator-helper"]
-			}
+			"./vendor/fluidphp/helpers/Translator": ["fluidphp/translator-helper"]
 		}
-	
-	- STAND-ALONE:
-		
-		"require": 
-		{
-			"fluidphp/translator-helper": "~1.0"
-		}
+	}
+```	
+Stand-alone:
+```		
+	"require": 
+	{
+		"fluidphp/translator-helper": "*"
+	}
+```
