@@ -1,10 +1,8 @@
- # FluidPhp Ppen Source Project Translator Helper
-
-*A powerfull framework based on the [phptoolcase](http://phptoolcase.com) library.*
+ # FluidPhp Translator Helper
 
 FluidPhp is a framework based on the PhpToolCase library, visit [phptoolcase.com](http://phptoolcase.com) for complete guides and examples.
 
-This helper is to parse xml tags in your views.
+This helper to can parse xml tags that can be used in your views.
 
 ## Project Info
 
