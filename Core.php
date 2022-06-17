@@ -2,20 +2,17 @@
 
 	namespace helpers\Translator;
 
-	class Core
+	class Translator
 	{
 		/**
 		*
 		*/
 		public function __construct( $xml , $fallbackFile = null )
 		{
-			$this->_addValues( $this->_loadXML( $xml ) );
-			if ( $fallbackFile ){ $this->_addValues( $this->_loadXML( $fallbackFile ) ); }
+			$this->load( $xml );
+			if ( $fallbackFile ){  $this->load( $fallbackFile ); }
 			$debug = array( 'file' => $xml , 'fallback' => $fallbackFile , 'data' => $this->_data );
-			if ( function_exists( 'ptc_log' ) )
-			{
-				ptc_log( $debug , 'Translation xml file loaded!' , 'Translator Helper Config' );
-			}
+			ptc_log( $debug , 'Translation xml file loaded!' , 'Translator Helper Config' );
 		}
 		/**
 		*
@@ -24,13 +21,41 @@
 		/**
 		*
 		*/
-		public function val( $value )
+		protected function addValues( $xml )
+		{
+			foreach ( $xml->xpath( 'translation' ) as $child )
+			{
+				$key = ( string ) $child->attributes( )->key;
+				if ( !isset( $this->_data[ $key ] ) ){ $this->_data[ $key ] = ( string ) $child[ 0 ]; }
+			}
+		}
+		/**
+		*
+		*/
+		public function load( $xml )
+		{
+			if ( !$file = realpath( $xml . '.xml' ) )
+			{
+				trigger_error( 'Translator could not load xml file ' . $xml . '.xml!' , E_USER_ERROR );
+				return false;
+			}
+			$this->addValues( simplexml_load_file( $file ) );
+			return $this;
+		}
+		/**
+		*
+		*/
+		public function val( $value , $data = null )
 		{
 			$value = trim( $value );
 			if ( !isset( $this->_data[ $value ] ) )
 			{
-				throw new \Exception( 'Translator could not find value "' . $value . '"!' );
+				trigger_error( 'Translator could not find value ' . $value . '!' , E_USER_WARNING );
 				return false;
+			}
+			if ( $data )
+			{
+				return $this->_parse( $this->_data[ $value ] , $data );
 			}
 			return $this->_data[ $value ];
 		}
@@ -48,29 +73,40 @@
 		/**
 		*
 		*/
-		protected function _loadXML( $xml )
+		protected function _parse( $string , $data )
 		{
-			if ( !$file = realpath( $xml . '.xml' ) )
+			foreach ( $data as $k => $v )
 			{
-				throw new \Exception( 'Translator could not load xml file ' . $xml . '.xml!' );
-				return false;
-			}
-			return simplexml_load_file( $file );
-		}
-		/**
-		*
-		*/
-		protected function _addValues( $xml )
-		{
-			foreach ( $xml->xpath( 'translation' ) as $child )
-			{
-				$key = ( string ) $child->attributes( )->key;
-				if ( !isset( $this->_data[ $key ] ) )
-				{ 
-					$this->_data[ $key ] = ( string ) $child[ 0 ];
+				if ( is_string( $v ) )
+				{
+					$string = str_replace( '{' . $k . '}' , $v , $string );
+					continue;
+				}
+				if ( is_object( $v ) )
+				{
+					$v = ( array ) $v;
+				}
+				if ( !is_array( $v ) )
+				{
+					continue;
+				}
+				foreach ( $v as $key => $value ) 
+				{
+					if ( !is_string( $value ) )
+					{
+						continue;
+					}
+					// unfinished
+					if ( preg_match_all( '#\[@(.*?)\({(.*?)\}\)\]#' , $string , $matches ) )
+					{
+						//ptc_log( $matches );
+					}
+					else
+					{
+						$string = str_replace( '{' . $k . '.' . $key . '}' , $value , $string );
+					}
 				}
 			}
+			return $string;
 		}
 	}
-
-	
