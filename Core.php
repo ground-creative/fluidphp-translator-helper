@@ -2,7 +2,7 @@
 
 	namespace helpers\Translator;
 
-	class Translator
+	class Core
 	{
 		/**
 		*
