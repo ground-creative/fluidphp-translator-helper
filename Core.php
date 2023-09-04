@@ -69,6 +69,22 @@
 		/**
 		*
 		*/
+		public function removeValue($key){ $this->remove($key); }
+		/**
+		*
+		*/
+		public function deleteValue($key){ $this->remove($key); }
+		/**
+		*
+		*/
+		public function delete($key){ $this->remove($key); }
+		/**
+		*
+		*/
+		public function remove( $key ){ unset($this->_data[$key]); }
+		/**
+		*
+		*/
 		protected $_data = array( );
 		/**
 		*
